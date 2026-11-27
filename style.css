@@ -51,14 +51,15 @@ h2 { font-size: 1.6rem; margin: 0 0 24px; }
 /* Hero */
 .hero {
   display: grid;
-  grid-template-columns: 1.8fr 1fr;
+  grid-template-columns: 2.3fr 1fr;
   gap: 48px;
   align-items: center;
   padding-top: 48px;
   padding-bottom: 80px;
 }
 h1 { font-size: 2.8rem; line-height: 1.15; margin: 0 0 12px; }
-.role { color: var(--text-soft); font-size: 1.1rem; margin: 0 0 16px; max-width: 520px; }
+.role { color: var(--text-soft); font-size: 1rem; margin: 0 0 4px; }
+.role + .role { margin-bottom: 20px; }
 .intro { color: var(--text-soft); max-width: 520px; margin: 0 0 28px; }
 
 .buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
