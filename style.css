@@ -1,0 +1,106 @@
+:root {
+  --bg: #12161C;
+  --card: #1B212B;
+  --text: #E4E7EB;
+  --text-soft: #98A2B3;
+  --accent: #7F9CC0;
+  --border: #2A3240;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 24px;
+}
+.nav-name { color: var(--text); font-weight: 600; }
+.nav nav a { margin-left: 24px; color: var(--text-soft); font-size: 0.95rem; }
+.nav nav a:hover { color: var(--text); text-decoration: none; }
+
+/* Sections */
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+h2 { font-size: 1.6rem; margin: 0 0 24px; }
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding-top: 48px;
+  padding-bottom: 80px;
+}
+h1 { font-size: 2.8rem; line-height: 1.15; margin: 0 0 12px; }
+.role { color: var(--accent); font-weight: 500; font-size: 1.1rem; margin: 0 0 16px; }
+.intro { color: var(--text-soft); font-size: 1.05rem; max-width: 520px; margin: 0 0 28px; }
+
+.buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 500;
+  border: 1px solid var(--accent);
+}
+.btn:hover { text-decoration: none; opacity: 0.85; }
+.btn-primary { background: var(--accent); color: var(--bg); }
+.btn-secondary { color: var(--accent); }
+
+.small-links a { margin-right: 18px; color: var(--text-soft); font-size: 0.95rem; }
+.small-links a:hover { color: var(--text); }
+
+/* Photo */
+.hero-photo { display: flex; justify-content: center; }
+.hero-photo img,
+.photo-placeholder {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+.photo-placeholder {
+  background: var(--card);
+  color: var(--text-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  padding: 32px 24px 48px;
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; gap: 32px; }
+  .hero-photo { order: -1; }
+  h1 { font-size: 2.2rem; }
+  .hero-photo img, .photo-placeholder { width: 180px; height: 180px; }
+}
